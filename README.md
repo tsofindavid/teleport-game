@@ -47,8 +47,8 @@ to move their pieces from the starting position to the target while navigating t
 2. **Setup and Execution**:
     - Clone the repository:
       ```bash
-      git clone https://github.com/yourusername/teleporty-game.git
-      cd teleporty-game
+      git clone https://github.com/tsofindavid/teleports-game.git
+      cd teleport-game
       ```
     - Run the script:
       ```bash

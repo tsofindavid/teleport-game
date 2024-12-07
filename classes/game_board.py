@@ -57,9 +57,14 @@ class GameBoard:
 
         for y, y_mapped in IteratorsUtils.get_range(self._table_size, self._board_y_scale):
             for x, x_mapped in IteratorsUtils.get_range(self._table_size, self._board_x_scale):
-                self._set_to_screen(x_mapped, y_mapped, '*')
+                self._set_to_screen(x_mapped, y_mapped, '·')
 
         self._set_to_screen(0, 0, '+')
+        self._set_to_screen(
+            (self._table_size - 1) * self._board_x_scale,
+            (self._table_size - 1) * self._board_y_scale,
+            '*'
+        )
 
         for teleport in self._teleports:
             self._set_to_screen(
