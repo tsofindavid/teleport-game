@@ -45,6 +45,7 @@ to move their pieces from the starting position to the target while navigating t
     - No third-party libraries are used.
 
 2. **Setup and Execution**:
+    - Ensure you have Python 3.x installed on your Unix-based system.
     - Clone the repository:
       ```bash
       git clone https://github.com/tsofindavid/teleports-game.git
@@ -52,7 +53,7 @@ to move their pieces from the starting position to the target while navigating t
       ```
     - Run the script:
       ```bash
-      python main.py
+      python3 main.py
       ```
 
 3. **User Input**:
