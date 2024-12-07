@@ -67,17 +67,37 @@ class GameBoard:
         )
 
         for teleport in self._teleports:
-            self._set_to_screen(
-                (teleport.get_start() % self._table_size) * self._board_x_scale,
-                (teleport.get_start() // self._table_size) * self._board_y_scale,
-                teleport.get_label()
-            )
+            row_start = (teleport.get_start() // self._table_size)
+            column_start = (teleport.get_start() % self._table_size)
 
-            self._set_to_screen(
-                (teleport.get_end() % self._table_size) * self._board_x_scale,
-                (teleport.get_end() // self._table_size) * self._board_y_scale,
-                teleport.get_label()
-            )
+            if row_start % 2:
+                self._set_to_screen(
+                    (self._table_size - 1 - column_start) * self._board_x_scale,
+                    row_start * self._board_y_scale,
+                    teleport.get_label()
+                )
+            else:
+                self._set_to_screen(
+                    column_start * self._board_x_scale,
+                    row_start * self._board_y_scale,
+                    teleport.get_label()
+                )
+
+            row_end = (teleport.get_end() // self._table_size)
+            column_end = (teleport.get_end() % self._table_size)
+
+            if row_end % 2:
+                self._set_to_screen(
+                    (self._table_size - 1 - column_end) * self._board_x_scale,
+                    row_end * self._board_y_scale,
+                    teleport.get_label()
+                )
+            else:
+                self._set_to_screen(
+                    column_end * self._board_x_scale,
+                    row_end * self._board_y_scale,
+                    teleport.get_label()
+                )
 
         for player in self._players:
             if player.get_id() == self._turn_player.get_id():
