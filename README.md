@@ -8,6 +8,14 @@ to move their pieces from the starting position to the target while navigating t
 
 ---
 
+## Demos
+
+[Demo with One Player](https://2ly.link/21k8r)
+
+[Demo with Two Players](https://2ly.link/21k94)
+
+---
+
 ## Features
 
 - Simulates **Teleporty** game mechanics for 1-4 players.
